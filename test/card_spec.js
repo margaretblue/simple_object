@@ -11,6 +11,18 @@ describe('Card object tests', function() {
         //   expect(card).to.have.property('rank');
 
     describe('constructor', function() {
+      it('card should be truthy (exists)', function(){
+        expect(card).to.be.ok;
       });
 
-  });
+      it('card should have a suit property', function(){
+        expect(card).to.have.property('suite');
+      });
+
+      it('card should have rank property', function(){
+        expect(card).to.have.property('rank');
+      });
+
+    });
+
+});

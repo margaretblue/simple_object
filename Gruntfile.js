@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         globals: ['should'],
         timeout: 3000,
         ignoreLeaks: false,
-        grep: '*-test',
+        //grep: '*-test',
         ui: 'bdd',
         reporter: 'tap'
       },
@@ -27,13 +27,20 @@ module.exports = function(grunt) {
         boss: true,
         eqnull: true,
         browser: true,
+        node: true,
         globals: {
           require: true,
           define: true,
           requirejs: true,
-          describe: true,
+          //describe: true,
           expect: true,
-          it: true
+          it: true,
+          /* MOCHA */
+          describe: false,
+          before: false,
+          beforeEach: false,
+          after: false,
+          afterEach: false
         }
       }
     }
@@ -44,6 +51,8 @@ module.exports = function(grunt) {
 
    // Load JSHint task
   grunt.loadNpmTasks('grunt-contrib-jshint');
+
+  //http://merrickchristensen.com/articles/gruntjs-workflow.html
 
   // Add a default task. This is optional, of course :)
   grunt.registerTask('default', ['simplemocha', 'jshint']);

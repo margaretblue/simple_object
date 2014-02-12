@@ -1,0 +1,25 @@
+{
+  // Details: https://github.com/victorporof/Sublime-JSHint#using-your-own-jshintrc-options
+  // Example: https://github.com/jshint/jshint/blob/master/examples/.jshintrc
+  // Documentation: http://www.jshint.com/docs/
+  //http://stackoverflow.com/questions/16260779/how-to-disable-the-warning-define-is-not-defined-using-jshint-and-requirejs
+  "browser": true,
+  "esnext": true,
+  "globals": {
+    /* MOCHA */
+    "describe"   : false,
+    "it"         : false,
+    "before"     : false,
+    "beforeEach" : false,
+    "after"      : false,
+    "afterEach"  : false
+    },
+  "globalstrict": true,
+  "node": true,
+  "quotmark": true,
+  "smarttabs": true,
+  "trailing": true,
+  "undef": true,
+  "unused": true,
+  "indent": 2
+}
