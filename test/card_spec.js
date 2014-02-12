@@ -1,4 +1,5 @@
 var expect = require('chai').expect,
+//creates card object
   Card = require('../lib/card').Card;
 
 describe('Card object tests', function() {
@@ -16,13 +17,26 @@ describe('Card object tests', function() {
       });
 
       it('card should have a suit property', function(){
-        expect(card).to.have.property('suite');
+      //   expect(card).to.have.property('suite'); //old way with literal assignment
+        expect(card.getSuite()).to.equal('Spades');
+        expect(card.getSuite()).to.not.equal('');
       });
 
       it('card should have rank property', function(){
-        expect(card).to.have.property('rank');
+      //   expect(card).to.have.property('rank'); //old way with literal assignment
+        expect(card.getRank()).to.equal(3);
+        expect(card.getRank()).to.not.equal(1);
       });
-
+    //card.getSuite()
     });
+
+    describe('immutable', function() {
+      //card should not be able to change property
+
+      it('should not change property', function() {
+        card.suite = 'Diamonds';
+        expect(card.getSuite()).to.not.equal('Diamonds');
+      });
+    })
 
 });
