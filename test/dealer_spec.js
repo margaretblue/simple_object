@@ -9,7 +9,7 @@ describe('Dealer Tests', function() {
   });
 
   it('have a name', function() {
-    expect(dealer.name).to.equal('Flashy McSnipe');
+    expect(dealer.getName()).to.equal('Flashy McSnipe');
   });
 
   it('can deal or have a card');
