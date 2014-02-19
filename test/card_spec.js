@@ -10,7 +10,8 @@ describe('Card object tests', function() {
 
     describe('constructor', function() {
       it('card should be truthy (exists)', function(){
-        expect(card).to.be.ok;
+        expect(card).to.be.ok; // jshint ignore:line
+        expect(card).to.be.a('object');
       });
 
       it('card should have a suit property', function(){
@@ -29,7 +30,7 @@ describe('Card object tests', function() {
         card.suite = 'Diamonds';
         expect(card.getSuite()).to.not.equal('Diamonds');
       });
-    })
+    });
 
 });
 
